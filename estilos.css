@@ -1,0 +1,338 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #350a36;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 1.5rem; /* Ajustado el padding para que no sea tan grande */
+    background-color: #5a0e41;
+    border-bottom: 2px solid #333;
+}
+
+header:hover {
+    background-color: #ec6a00;
+    transition: background-color 0.7s ease;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    animation: fadeIn 1s ease-out;
+}
+
+header img {
+    width: 350px; /* Ajustado para ser más pequeño */
+    height: 350px; /* Ajustado para ser más pequeño */
+    border-radius: 150%;
+    margin-top: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f3a847;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f3a847;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Secciones */
+section {
+    padding: 1.5rem 1rem; /* Reducido padding */
+    margin-bottom: 1.5rem; /* Reducido margen */
+    background-color: #1d1d1d;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 90%; /* Mantiene el tamaño ajustado */
+    max-width: 90%; /* Sección más compacta */
+    margin: 1rem auto; /* Alineado al centro */
+}
+
+section:hover {
+    background-color: #ec6a00;
+}
+
+section h2 {
+    font-size: 1.8rem; /* Reducido el tamaño del título */
+    margin-bottom: 1rem;
+    color: #f3a847;
+    text-align: center;
+}
+
+section p {
+    font-size: 1rem; /* Reducido tamaño del texto */
+    text-align: center;
+    color: #ddd;
+    margin-top: 1rem;
+    padding: 3rem;
+}
+
+section img {
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 1rem auto;
+    transition: transform 0.3s ease;
+    width: 100px; /* Reducción del tamaño de las imágenes */
+    height: auto;
+}
+
+section img:hover {
+    transform: scale(1.8); /* Ajustado el efecto hover */
+}
+
+/* Lista de Tecnologías */
+.lista-tecnologias {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.lista-tecnologias i {
+    font-size: 2rem;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.lista-tecnologias i:hover {
+    color: #f3a847;
+}
+
+/* Contacto */
+footer {
+    background-color: #1f1f1f;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-top: 2px solid #333;
+}
+
+footer:hover {
+    background-color: #570457;
+    transition: background-color 0.7s ease;
+}
+
+footer h2 {
+    font-size: 1.8rem; /* Reducido el tamaño */
+    color: #f3a847;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #f3a847;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+footer img {
+    width: 350px;
+    height: auto;
+    margin-left: 40%;
+}
+
+ul.redes-sociales {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+ul.redes-sociales li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+ul.redes-sociales li a:hover {
+    color: #f3a847;
+}
+
+/* Formulario de Contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+form img {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+form img:hover {
+    transform: scale(1.1);
+}
+
+form h2 {
+    transition: transform 0.3s ease-in-out;
+}
+
+form h2:hover {
+    transform: scale(1.1);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #222;
+    color: #f3a847;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #f3a847;
+}
+
+form button {
+    padding: 1rem 2rem;
+    background-color: #f3a847;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #f07a21;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries para Pantallas Pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Ajustes en el tamaño de los elementos */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    footer h2 {
+        font-size: 1.5rem;
+    }
+
+    footer img {
+        width: 250px;
+        margin-left: 0;
+    }
+
+    .lista-tecnologias {
+        flex-wrap: wrap; /* Permite que los iconos se acomoden en una nueva fila si es necesario */
+        justify-content: space-evenly;
+    }
+
+    .lista-tecnologias i {
+        font-size: 1.5rem;
+    }
+
+    /* Ajustes en el formulario */
+    form input,
+    form textarea {
+        max-width: 90%;
+    }
+
+    form button {
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Media Queries para Smartphones */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Los elementos de navegación se apilan verticalmente */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 1.5rem;
+    }
+
+    footer img {
+        width: 200px;
+    }
+}
